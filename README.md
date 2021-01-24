@@ -28,7 +28,7 @@ The jupyter notebook PyCitySchools.ipynb therefore contains the following steps 
         - creating a dataframe out of the dictionary (district_summary_df)
         - creating a copy of district_summary_df to apply formatting 
         - applying formatting to district_summary_df_F, and displaying it
-* School level analysis:    
+* School-level analysis:    
     * School-level summary:
         - creating empty lists to be populated with values for: school names, school type (district or charter), students per school, budget per school, budget per student, average mathematics score, average reading score, percent of students passing mathematics, percent of students passing reading, percent of students passing both subjects
         - defining a function (append_to_list) that takes in the name of a variable relating to a column in schools_and_students_df (my_var) and the list relating to that variable (my_var_list), and adds all rows that relate to that variable to the list
