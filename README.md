@@ -31,6 +31,27 @@ The jupyter notebook PyCitySchools.ipynb therefore contains the following steps 
         - applying formatting to district_summary_df_F, and displaying it
 * School level analysis:    
     * School-level summary:
+        - creating empty lists to be populated with values for: school names, school type (district or charter), students per school, budget per school, budget per student, average mathematics score, average reading score, percent of students passing mathematics, percent of students passing reading, percent of students passing both subjects
+        - defining a function (append_to_list) that takes in the name of a variable relating to a column in schools_and_students_df (my_var) and the list relating to that variable (my_var_list), and adds all rows that relate to that variable to the list
+        - creating a grouped by object (grouped_schools_df) by grouping by school name on schools_and_students_df
+        - using grouped_schools_df to access different columns and apply different functions for each needed variable:
+            - school names: accessing 'school_name' column, and calling .unique(), calling append_to_list on the object (school_name) created
+            - school types: accessing 'school_type' column, calling .unique(), and calling append_to_list on the object (school_type) created
+            - total students per school: accessing 'Student ID' column, calling .count(), calling append_to_list on object 'total_students'
+            - total budget per school: accessing 'budget' column, calling .unique(), explicitly defining data type as a number, calling append_to_list on object 'total_budget'
+            - budget per student: dividing total_budget/total_students (to create 'budget_per_student' variable), calling append_to_list on result
+            - average mathematics score: accessing 'math_score' column, calling .sum() to create 'maths_scores_sum', dividing it by 'total_students' to create 'avg_maths_score', calling append_to_list on object
+            - average reading score: accessing 'reading_score' column, calling .sum() to create 'reading_scores_sum', dividing it by 'total_students' to create 'avg_reading_score', calling append_to_list on object
+        - creating grouped by objects for only passing mathematics scores, only passing reading scores, only passing scores for both exams (grouped_maths, grouped_reading, grouped_overall): applying .count() to the relevant column ('maths_score', 'reading_score', either one for the third, since both columns would be the same length for the third grouped by object), dividing by total_students, multiplying by 100, explictly setting a numeric type, and calling append_to_list function
+        - creating dataframe for display:
+            - creating a dictionary to hold the lists (schools_dict)
+            - creating a dataframe from the dictionary (schools_dict_df)
+            - initial cleanup:
+                - removing brackets from school name and school type columns
+                - setting the school name column as the index
+            - formatted copy:
+                - copying the schools_dict_df for formatting (schools_dict_df_F)
+                - adding commas, rounding, and dollar signs
     * Schools with top overall passing scores:
     * Schools with bottom overall passing scores:
     * Mathematics scores by grade:
