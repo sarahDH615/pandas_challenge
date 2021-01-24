@@ -67,7 +67,8 @@ The jupyter notebook PyCitySchools.ipynb therefore contains the following steps 
         - creating a series for each year that holds the scores, with the index as the school names, and defining a numeric type
         - grouping each series by school name, and finding the average, and saving the results to the variables grouped9maths, grouped10maths, grouped11maths, and grouped12maths  
         - creating a dataframe (maths_scores_df) out of the grouped variables
-    * Reading scores by grade: following the same steps as in the mathematics scores by grade, resulting in the dataframe reading_scores_df
+    * Reading scores by grade: 
+        - following the same steps as in the mathematics scores by grade, resulting in the dataframe reading_scores_df
     * School performance in exams based on school spending ranges:
         - finding quartiles of schools_dict_df's 'perStudentBudget' column to find sensible spending ranges to apply to the data
         - creating empty lists to append data for: spending amount in each school, mathematics scores, reading scores, percent passing mathematics, percent passing reading, percent passing both exams
