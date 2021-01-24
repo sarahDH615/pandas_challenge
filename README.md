@@ -6,7 +6,7 @@
 
 ### description:
 
-The goal of this analysis was to uncover trends within the reading and mathematics yearly test scores from schools within a district in order to produce potential recommendations for budget allocations in future years.
+The goal of this analysis was to uncover trends within the reading and mathematics yearly exam scores from schools within a district in order to produce potential recommendations for budget allocations in future years.
 
 The jupyter notebook PyCitySchools.ipynb therefore contains the following steps to reveal trends:
 * Data Cleaning:
