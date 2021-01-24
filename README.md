@@ -80,14 +80,14 @@ The jupyter notebook PyCitySchools.ipynb therefore contains the following steps 
         - grouping spending_ranges_df by the spending ranges and finding the average of each bin's scores and percentages for each exam
     * School scores based on school size: 
         - the same procedure as for school spending ranges was done:
-        - determining how many students constitutes a small, medium, or large school
-        - creating empty lists for different exam scores and percentages
-        - defining a loop_collector function
-        - calling loop_collector for each size school
-        - creating series for each list
-        - creating a dataframe, school_size_df, out of the series
-        - dividing the dataframe into bins using pd.cut()
-        - grouping by school size, finding the mean scores and percentages for each bin
+            - determining how many students constitutes a small, medium, or large   school
+            - creating empty lists for different exam scores and percentages
+            - defining a loop_collector function
+            - calling loop_collector for each size school
+            - creating series for each list
+            - creating a dataframe, school_size_df, out of the series
+            - dividing the dataframe into bins using pd.cut()
+            - grouping by school size, finding the mean scores and percentages for  each bin
     * School scores based on school type (charter or district): 
         - creating empty lists for different exam scores and percentages
         - using a for loop to append to the lists
