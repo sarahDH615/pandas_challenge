@@ -14,7 +14,7 @@ The jupyter notebook PyCitySchools.ipynb therefore contains the following steps 
     * left merge the two dataframes in order to have data only on students connected to schools (schools_and_students_df)
 * District-level summary:
     - number of schools: creating and finding the length of a list of schools (num_schools)
-    - total number of students: finding the length of the 'Student ID' column(which contains unique values) in schools_and_students_df (num_students)
+    - total number of students: finding the length of the 'Student ID' column (which contains unique values) in schools_and_students_df (num_students)
     - total budget: creating and finding the sum of a list of budgets (total_budget)
     - average mathematics exam score: finding the average of the math_scores column in schools_and_students_df (avg_maths)
     - average reading exam score: finding the average of the reading_scores column in schools_and_students_df (avg_reading)
