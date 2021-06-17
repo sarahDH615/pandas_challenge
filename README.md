@@ -119,9 +119,9 @@ Setting of types was important in several instances throughout this notebook. Ex
 
 The final three charts, looking at schools by their budgets, size, and type, display similar data: average exam scores and percentages passing exams. However, different methods are used to get at those averages and percentages. In school spending and size, a function is used to append data based on different defined ranges of spending or size, and pd.cut() is used to divide the dataframes into those ranges; for school type, a for loop is used, and pd.cut() is not used. The reason for these differences is that spending and size can be broken down by means of numbers, while school type is a qualitative difference. The function pd.cut() accepts numerical differentiations, which does not apply to the school type. Relatedly, for school size and spending, proper data appending requires separating the source dataframe by the defined numeric ranges. A for loop could be done multiple times, each time filtering by one range, but it is more efficient to use a function that takes each range. For school type, only one for loop is needed, so there is no need to create another function.   
 
-<p align="center">
-  <img width="800" alt='Using pd.cut()' src="images/pdCut.png">
-  <img width="800" alt='Using only a for loop' src="images/noCutType.png">
+<p align="left">
+  <img width="850" alt='Using pd.cut()' src="images/pdCut.png">
+  <img width="850" alt='Using only a for loop' src="images/noCutType.png">
 </p>
 
 *The method used to create a grouped dataframe for School Size vs. School Type.*
