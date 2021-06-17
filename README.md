@@ -68,7 +68,7 @@ The jupyter notebook PyCitySchools.ipynb therefore contains the following steps 
         - by school budget: sorting schools_dict_df by total budget to see if there is overlap between the ranking of schools by scores and by budget
         ![Ranked Schools By Budget](images/rankedBudget.png)
     * Mathematics scores by grade:
-    
+
         ![Maths Scores By Year](images/mathsScoresYear.png)
         - creating empty lists for holding mathematics scores for all four years (9th grade, 10th grade, 11th grade, 12th grade), and the names of schools to correspond to each score
         - defining a function loop_creator to append to appropriate lists
@@ -115,6 +115,13 @@ The majority of the coding done in this notebook was repetitive: determining how
 
 Setting of types was important in several instances throughout this notebook. Explicit numeric types are assigned to different series within the school-level summary, in order to ensure that mathematical operations can be done with them: in those instances the assumed type was string, meaning that those operations, such as finding the mean or sum, could not be done. Ensuring numerical operations could be done was also a factor in creating two versions of the data frames for the district summary and school level summary: one for formatting, and the other with no formatting. Once formatting occurs, the formatted values are set as strings, and cannot be re-set as floats/integers. To sidestep this issue, a non-formatted dataframe for each summary was created but not displayed, so that the dataframes could be used later within the notebook to do further calculations. 
 
+![Making copy for formatting](images/formatCopying.png)
+
 The final three charts, looking at schools by their budgets, size, and type, display similar data: average exam scores and percentages passing exams. However, different methods are used to get at those averages and percentages. In school spending and size, a function is used to append data based on different defined ranges of spending or size, and pd.cut() is used to divide the dataframes into those ranges; for school type, a for loop is used, and pd.cut() is not used. The reason for these differences is that spending and size can be broken down by means of numbers, while school type is a qualitative difference. The function pd.cut() accepts numerical differentiations, which does not apply to the school type. Relatedly, for school size and spending, proper data appending requires separating the source dataframe by the defined numeric ranges. A for loop could be done multiple times, each time filtering by one range, but it is more efficient to use a function that takes each range. For school type, only one for loop is needed, so there is no need to create another function.   
+
+![Using pd.cut()](images/pdCut.png)
+![Using only a for loop](images/noCutType.png)
+
+*The method used to create a grouped dataframe for School Size vs. School Type.*
 
 Further observations and conclusions can be found in the schools_analysis.pdf file. 
