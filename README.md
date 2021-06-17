@@ -30,9 +30,9 @@ The jupyter notebook PyCitySchools.ipynb therefore contains the following steps 
         - creating a copy of district_summary_df to apply formatting 
         - applying formatting to district_summary_df_F, and displaying it
 
-* School-level analysis: 
-    ![School Summary](images/schoolSummary.png)   
+* School-level analysis:   
     * School-level summary:
+        ![School Summary](images/schoolSummary.png) 
         - creating empty lists to be populated with values for: school names, school type (district or charter), students per school, budget per school, budget per student, average mathematics score, average reading score, percent of students passing mathematics, percent of students passing reading, percent of students passing both subjects
         - defining a function (append_to_list) that takes in the name of a variable relating to a column in schools_and_students_df (my_var) and the list relating to that variable (my_var_list), and adds all rows that relate to that variable to the list
         - creating a grouped by object (grouped_schools_df) by grouping by school name on schools_and_students_df
@@ -64,8 +64,11 @@ The jupyter notebook PyCitySchools.ipynb therefore contains the following steps 
         - same procedure as above, but sorting in ascending order (saving as bottom_schools), so the first 5 indices will display the schools with lowest scores
     * Ranking schools: 
         - by overall passing scores: sorting the schools_dict_df by overall passing scores, and displaying all of the indices, so that patterns in schools in-between the top and bottom scoring schools can be seen
+        ![Ranked Schools By Scores](images/rankedSchools.png)
         - by school budget: sorting schools_dict_df by total budget to see if there is overlap between the ranking of schools by scores and by budget
+        ![Ranked Schools By Budget](images/rankedBudget.png)
     * Mathematics scores by grade:
+        ![Maths Scores By Year](images/mathsScoresYear.png)
         - creating empty lists for holding mathematics scores for all four years (9th grade, 10th grade, 11th grade, 12th grade), and the names of schools to correspond to each score
         - defining a function loop_creator to append to appropriate lists
         - calling the function for each year
@@ -73,8 +76,10 @@ The jupyter notebook PyCitySchools.ipynb therefore contains the following steps 
         - grouping each series by school name, and finding the average, and saving the results to the variables grouped9maths, grouped10maths, grouped11maths, and grouped12maths  
         - creating a dataframe (maths_scores_df) out of the grouped variables
     * Reading scores by grade: 
+        ![Reading Scores By Year](images/readingScoresYear.png)
         - following the same steps as in the mathematics scores by grade, resulting in the dataframe reading_scores_df
     * School performance in exams based on school spending ranges:
+        ![Performance by school spending](images/spendingByStudent.png)
         - finding quartiles of schools_dict_df's 'perStudentBudget' column to find sensible spending ranges to apply to the data
         - creating empty lists to append data for: spending amount in each school, mathematics scores, reading scores, percent passing mathematics, percent passing reading, percent passing both exams
         - defining the function loop_collector, which takes the minimum and maximum number for a spending range, and appends data to each empty list for schools in schools_dict_df that apply to that spending range
@@ -84,6 +89,7 @@ The jupyter notebook PyCitySchools.ipynb therefore contains the following steps 
         - applying pd.cut() to spending_ranges_df to divide the dataframe into the appropate bins
         - grouping spending_ranges_df by the spending ranges and finding the average of each bin's scores and percentages for each exam
     * School scores based on school size: 
+        ![Performance by school size](images/schoolSize.png)
         - the same procedure as for school spending ranges was done:
             - determining how many students constitutes a small, medium, or large school
             - creating empty lists for different exam scores and percentages
@@ -94,6 +100,7 @@ The jupyter notebook PyCitySchools.ipynb therefore contains the following steps 
             - dividing the dataframe into bins using pd.cut()
             - grouping by school size, finding the mean scores and percentages for each bin
     * School scores based on school type (charter or district): 
+        ![Performance by school type](images/schoolType.png)
         - creating empty lists for different exam scores and percentages
         - using a for loop to append to the lists
         - creating series for each list
