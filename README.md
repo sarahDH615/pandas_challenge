@@ -1,5 +1,7 @@
 # pandas_challenge
 
+![Exams](/images/testTaking.jpg)
+
 ### contains:
 * PyCitySchools.ipynb
 * schools_analysis.pdf
