@@ -13,6 +13,7 @@ The jupyter notebook PyCitySchools.ipynb therefore contains the following steps 
     * reading in two csvs as dataframes, one containing data on schools, the other containing student data (school_data, student_data respectively)
     * left merge the two dataframes in order to have data only on students connected to schools (schools_and_students_df)
 * District-level summary:
+    ![District Summary](images/districtSummary.png)
     - number of schools: creating and finding the length of a list of schools (num_schools)
     - total number of students: finding the length of the 'Student ID' column (which contains unique values) in schools_and_students_df (num_students)
     - total budget: creating and finding the sum of a list of budgets (total_budget)
@@ -29,9 +30,8 @@ The jupyter notebook PyCitySchools.ipynb therefore contains the following steps 
         - creating a copy of district_summary_df to apply formatting 
         - applying formatting to district_summary_df_F, and displaying it
 
-![District Summary](images/districtSummary.png)
-
-* School-level analysis:    
+* School-level analysis: 
+    ![School Summary](images/schoolSummary.png)   
     * School-level summary:
         - creating empty lists to be populated with values for: school names, school type (district or charter), students per school, budget per school, budget per student, average mathematics score, average reading score, percent of students passing mathematics, percent of students passing reading, percent of students passing both subjects
         - defining a function (append_to_list) that takes in the name of a variable relating to a column in schools_and_students_df (my_var) and the list relating to that variable (my_var_list), and adds all rows that relate to that variable to the list
@@ -54,21 +54,14 @@ The jupyter notebook PyCitySchools.ipynb therefore contains the following steps 
             - formatted copy:
                 - copying the schools_dict_df for formatting (schools_dict_df_F)
                 - adding commas, rounding, and dollar signs
-
-![School Summary](images/schoolSummary.png)
-
     * Schools with five highest overall passing scores:
+        ![Highest Scores](images/bestSchools.png)
         - sorting schools_dict_df (the un-formatted school-level summary) by percent passing both exams
         - re-setting index so that a numeric index can be used to display top 5 schools
         - re-setting index as school name, saving as top_schools, displaying
-    
-    ![Highest Scores](images/bestSchools.png)
-
     * Schools with five lowest overall passing scores: 
+        ![Lowest Scores](images/worstSchools.png)
         - same procedure as above, but sorting in ascending order (saving as bottom_schools), so the first 5 indices will display the schools with lowest scores
-    
-    ![Lowest Scores](images/worstSchools.png)
-
     * Ranking schools: 
         - by overall passing scores: sorting the schools_dict_df by overall passing scores, and displaying all of the indices, so that patterns in schools in-between the top and bottom scoring schools can be seen
         - by school budget: sorting schools_dict_df by total budget to see if there is overlap between the ranking of schools by scores and by budget
