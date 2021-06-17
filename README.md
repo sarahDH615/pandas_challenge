@@ -68,6 +68,7 @@ The jupyter notebook PyCitySchools.ipynb therefore contains the following steps 
         - by school budget: sorting schools_dict_df by total budget to see if there is overlap between the ranking of schools by scores and by budget
         ![Ranked Schools By Budget](images/rankedBudget.png)
     * Mathematics scores by grade:
+    
         ![Maths Scores By Year](images/mathsScoresYear.png)
         - creating empty lists for holding mathematics scores for all four years (9th grade, 10th grade, 11th grade, 12th grade), and the names of schools to correspond to each score
         - defining a function loop_creator to append to appropriate lists
@@ -76,6 +77,7 @@ The jupyter notebook PyCitySchools.ipynb therefore contains the following steps 
         - grouping each series by school name, and finding the average, and saving the results to the variables grouped9maths, grouped10maths, grouped11maths, and grouped12maths  
         - creating a dataframe (maths_scores_df) out of the grouped variables
     * Reading scores by grade: 
+
         ![Reading Scores By Year](images/readingScoresYear.png)
         - following the same steps as in the mathematics scores by grade, resulting in the dataframe reading_scores_df
     * School performance in exams based on school spending ranges:
