@@ -28,6 +28,7 @@ The jupyter notebook PyCitySchools.ipynb therefore contains the following steps 
         - creating a dataframe out of the dictionary (district_summary_df)
         - creating a copy of district_summary_df to apply formatting 
         - applying formatting to district_summary_df_F, and displaying it
+
 ![District Summary](images/districtSummary.png)
 
 * School-level analysis:    
