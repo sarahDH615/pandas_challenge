@@ -54,12 +54,21 @@ The jupyter notebook PyCitySchools.ipynb therefore contains the following steps 
             - formatted copy:
                 - copying the schools_dict_df for formatting (schools_dict_df_F)
                 - adding commas, rounding, and dollar signs
+
+![School Summary](images/schoolSummary.png)
+
     * Schools with five highest overall passing scores:
         - sorting schools_dict_df (the un-formatted school-level summary) by percent passing both exams
         - re-setting index so that a numeric index can be used to display top 5 schools
         - re-setting index as school name, saving as top_schools, displaying
+    
+    ![Highest Scores](images/bestSchools.png)
+
     * Schools with five lowest overall passing scores: 
         - same procedure as above, but sorting in ascending order (saving as bottom_schools), so the first 5 indices will display the schools with lowest scores
+    
+    ![Lowest Scores](images/worstSchools.png)
+
     * Ranking schools: 
         - by overall passing scores: sorting the schools_dict_df by overall passing scores, and displaying all of the indices, so that patterns in schools in-between the top and bottom scoring schools can be seen
         - by school budget: sorting schools_dict_df by total budget to see if there is overlap between the ranking of schools by scores and by budget
